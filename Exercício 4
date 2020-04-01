@@ -1,0 +1,75 @@
+//Gabriela Campos e Giovana Pereira
+//Turma 30
+
+<? php
+
+Class Veterinario {
+Public $ver;
+Public function examina ($a) {
+echo "examinando $a \n";
+$this -> ver = true;
+
+}
+}
+
+Class Animal {
+Public $nome;
+Public $idade;
+Public $som;
+Public $ação;
+
+
+Public function setSom () {
+echo "{$this -> nome} {$this -> som} \n";
+
+}
+}
+
+Class Cachorro extends Animal {
+Public function Cachorro ($n, $i, $s) {
+$this -> nome = $n;
+$this -> idade = $i;
+$this -> som = $s;
+$this -> acao = "correr";
+
+}}
+
+Class Cavalo extends Animal {
+Public function Cavalo ($n, $i, $s) {
+$this -> nome = $n;
+$this -> idade = $i;
+$this -> som = $s;
+$this -> acao = "correr";
+
+}}
+
+Class Preguica extends Animal {
+Public function Preguica ($n, $i, $s) {
+$this -> nome = $n;
+$this -> idade = $i;
+$this -> som = $s;
+$this -> acao = "subir em arvores";
+
+}}
+
+$ex = new veterinário;
+$a1 = new Cachorro ("Leonidas", "2 anos", "latir");
+$ex -> examina ($a1 -> nome);
+if ($ex -> ver == true) {
+$a1 -> setSom ();
+
+}
+
+$a2 = new Cavalo ("Baio", "4 anos", "relinchar");
+$ex-> examina ($a2 -> nome);
+if ($ex -> ver == true) {
+$a2 -> setSom ();
+
+}
+
+$a3 = new Preguica ("Moana", "7 anos", "balir");
+$ex -> examina ($a3 -> nome);
+if ($ex -> ver == true) {
+$a3 -> setSom ();}
+
+?>
