@@ -1,0 +1,44 @@
+//Gabriela Campos e Giovana Pereira
+// Turma 30
+
+<? php
+
+Class Animal {
+Public $nome;
+Public $idade;
+Public $som;
+Public $acao;
+
+}
+
+Class Cachorro extends Animal {
+Public function Cachorro ($n, $i, $s) {
+$this-> nome = $n;
+$this-> idade = $i;
+$this-> som = $s;
+$this-> acao = "correr";
+
+}
+}
+
+Class Cavalo extends Animal {
+Public function Cavalo ($n, $i, $s) {
+$this-> nome = $n;
+$this-> idade = $i;
+$this-> som = $s;
+$this-> acao = "correr";
+
+}
+}
+
+Class Preguica extends Animal {
+Public function Preguica ($n, $i, $s) {
+$this-> nome = $n;
+$this-> idade = $i;
+$this-> som = $s;
+$this-> acao = "subir em arvores";
+
+}
+}
+
+?>
