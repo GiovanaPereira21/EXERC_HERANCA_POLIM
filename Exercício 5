@@ -1,0 +1,68 @@
+//Gabriela Campos e Giovana Pereira
+//Turma 30
+
+<? php
+
+Class Imovel {
+Public $endereco;
+Public $preco;
+
+}
+
+Class Novo extends Imovel {
+Public $add;
+Public function Novo ($end, $p) {
+$this -> endereco = $end;
+$this -> preco = $p;
+
+}
+
+Public function setAdd () {
+$this -> preco = $this -> preco + (($this -> preco * 25)/100); 
+
+}
+
+Public function getAdd () {
+echo "Para este imovel novo tem um adicional de 25% \n";
+
+}}
+
+Class Velho extends Imovel {
+Public $des;
+Public function Velho ($end, $p) {
+$this -> endereco = $end;
+$this -> preco = $p;
+
+}
+
+Public function setdes () {
+$this -> preco = $this -> preco - (($this -> preco * 15)/100); 
+
+}
+
+Public function getdes () {
+echo "Para este imovel antigo tem um desconto de 15% \n";
+
+}}
+
+$imv1 = new Novo ("Rua Alvaro Batista, número 1718", 10500);
+$imv1 -> getAdd (); 
+
+echo "Primeiro Imovel: (Novo) \n";
+echo "Endereço: {$imv1 -> endereco} \n";
+echo "Preço: R$ {$imv1 -> preco} \n";
+
+$imv1 -> setAdd ();
+echo "Preco com inclusão adicional: {$imv1 -> preco} \n \n";
+
+$imv2 = new Velho ("Rua Alvaro Batista, Residencial Cabo Pedroso,", 90000);
+$imv2 -> getdes (); 
+
+echo "Segundo Imovel: (Velho) \n";
+echo "Endereço: {$imv2 -> endereco} \n";
+echo "Preço: R$ {$imv2 -> preco} \n";
+
+$imv2 -> setdes ();
+echo "Preco com desconto incluído: {$imv2 -> preco}";
+
+?>
