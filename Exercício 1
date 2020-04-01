@@ -1,0 +1,49 @@
+//Gabriela Campos e Giovana Pereira
+//Turma 30
+
+<?php
+  Class Veiculo {
+    Public $modelo;
+    Public $velocidade;
+    Public $passageiros;
+    Public $combustivel;
+  }
+  
+  Class Aviao extends Veiculo {
+  Public $uso;
+  Public $tipo;
+  
+  Public function Aviao ($mod, $vel, $pasg, $comb, $uso, $tipo) {
+    $this -> modelo = $mod;
+    $this -> velocidade = $vel;
+    $this -> passageiros = $pasg;
+    $this -> combustivel = $comb;
+    $this -> uso = $uso;
+    $this -> tipo = $tipo;
+  }
+  }
+  
+  Class Carro extends Veiculo {
+  Public $portas;
+  Public $ano;
+  
+  Public function Carro ($mod, $vel, $pasg, $comb, $portas, $ano) {
+    $this -> modelo = $mod;
+    $this -> velocidade = $vel;
+    $this -> passageiros = $pasg;
+    $this -> combustivel = $comb;
+    $this -> portas = $portas;
+    $this -> ano = $ano;
+  }}
+  $avi1= new Aviao ("Cessna 140", "200 km/h", 2, "780 litros", "Agricola", "Aeronave utilitária leve");
+  $avi2= new Aviao ("Airbus a380", "910 hm/h", 593, "32.301 litros", "Transporte", "Aeronave comercial turbofan quadrimotor");
+ 
+ print_r($avi1);
+ print_r($avi2);
+ 
+  $car1= new Carro ("Jeep", "190 km/h", 2, "54 litros", 2, 1964);
+  $car2= new Carro ("Gordini", "120 km/h", 5, "32 litros", 4,1957);
+  
+  print_r($car1);
+  print_r($car2);
+  ?>
